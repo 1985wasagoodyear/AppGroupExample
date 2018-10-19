@@ -14,6 +14,8 @@ class SenderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // when the app becomes inactive
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didLeaveApp),
                                                name: UIApplication.willResignActiveNotification,

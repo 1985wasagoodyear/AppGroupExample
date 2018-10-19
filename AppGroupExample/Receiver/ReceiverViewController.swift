@@ -13,6 +13,7 @@ class ReceiverViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
+        // get the saved value from the common store
         if let text = DefaultsStore.string(forKey: SHARED_USER_DEFAULTS_KEY) {
             self.textLabel.text = text
         } else {

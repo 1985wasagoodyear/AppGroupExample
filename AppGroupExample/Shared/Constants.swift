@@ -6,6 +6,10 @@
 //  Copyright © 2018 Kevin Yu. All rights reserved.
 //
 
+// constants, defines the shared store for persistance
+// just using UserDefaults
+// note: setup for FileManager later
+
 import Foundation
 
 let SHARED_USER_DEFAULTS_GROUP = "group.KevinYu.AppGroupExample"

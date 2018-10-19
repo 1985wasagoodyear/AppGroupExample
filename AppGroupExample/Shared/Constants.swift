@@ -8,7 +8,6 @@
 
 // constants, defines the shared store for persistance
 // just using UserDefaults
-// note: setup for FileManager later
 
 import Foundation
 

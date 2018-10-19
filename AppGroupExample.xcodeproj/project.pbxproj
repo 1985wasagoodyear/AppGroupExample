@@ -20,6 +20,8 @@
 		3F0BE1BB217A5A7600D79A8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE1BA217A5A7600D79A8E /* Constants.swift */; };
 		3F0BE1BC217A5A8300D79A8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE1BA217A5A7600D79A8E /* Constants.swift */; };
 		3F6ED37F217A61AC0001ECD8 /* ReceiverInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6ED37E217A61AC0001ECD8 /* ReceiverInfo.plist */; };
+		3F6ED381217A71260001ECD8 /* SharedFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6ED380217A71260001ECD8 /* SharedFileManager.swift */; };
+		3F6ED382217A71410001ECD8 /* SharedFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6ED380217A71260001ECD8 /* SharedFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		3F6ED37B217A5EB70001ECD8 /* AppGroupExampleSender.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppGroupExampleSender.entitlements; sourceTree = "<group>"; };
 		3F6ED37C217A5EBB0001ECD8 /* AppGroupExampleReceiver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppGroupExampleReceiver.entitlements; sourceTree = "<group>"; };
 		3F6ED37E217A61AC0001ECD8 /* ReceiverInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReceiverInfo.plist; sourceTree = "<group>"; };
+		3F6ED380217A71260001ECD8 /* SharedFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0BE1BA217A5A7600D79A8E /* Constants.swift */,
+				3F6ED380217A71260001ECD8 /* SharedFileManager.swift */,
 				3F0BE193217A574C00D79A8E /* Main.storyboard */,
 			);
 			path = Shared;
@@ -229,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6ED381217A71260001ECD8 /* SharedFileManager.swift in Sources */,
 				3F0BE1B3217A585500D79A8E /* AppDelegate.swift in Sources */,
 				3F0BE192217A574C00D79A8E /* SenderViewController.swift in Sources */,
 				3F0BE1BB217A5A7600D79A8E /* Constants.swift in Sources */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6ED382217A71410001ECD8 /* SharedFileManager.swift in Sources */,
 				3F0BE1B8217A589100D79A8E /* AppDelegate.swift in Sources */,
 				3F0BE1B9217A589800D79A8E /* ReceiverViewController.swift in Sources */,
 				3F0BE1BC217A5A8300D79A8E /* Constants.swift in Sources */,

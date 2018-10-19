@@ -25,9 +25,22 @@ class SenderViewController: UIViewController {
     @objc
     func didLeaveApp() {
         // save the data
-        DefaultsStore.set(textField.text, forKey: SHARED_USER_DEFAULTS_KEY)
+        if let text = textField.text {
+            self.saveToFileManager(text)
+        }
+    }
+    
+    // MARK: Persistance Manager Handlers
+    
+    func saveToFileManager(_ text: String) {
+        SharedFileManager.save(string: text, fileName: SHARED_FILE_FILENAME)
+    }
+    
+    func saveToUserDefaults(_ text: String) {
+        DefaultsStore.set(text, forKey: SHARED_USER_DEFAULTS_KEY)
         DefaultsStore.synchronize()
     }
+    
 
 }
 

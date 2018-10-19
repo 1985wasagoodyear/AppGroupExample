@@ -14,10 +14,20 @@ class ReceiverViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // get the saved value from the common store
-        if let text = DefaultsStore.string(forKey: SHARED_USER_DEFAULTS_KEY) {
+        if let text = self.loadFromFileManager() {
             self.textLabel.text = text
         } else {
             self.textLabel.text = ""
         }
+    }
+    
+    // MARK: Persistance Manager Handlers
+    
+    private func loadFromUserDefaults() -> String? {
+        return DefaultsStore.string(forKey: SHARED_USER_DEFAULTS_KEY)
+    }
+    
+    private func loadFromFileManager() -> String? {
+        return SharedFileManager.loadFile(SHARED_FILE_FILENAME)
     }
 }

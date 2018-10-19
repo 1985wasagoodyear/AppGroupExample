@@ -7,11 +7,11 @@
 //
 
 // constants, defines the shared store for persistance
-// just using UserDefaults
+// this file contains all setup for UserDefaults
 
 import Foundation
 
 let SHARED_USER_DEFAULTS_GROUP = "group.KevinYu.AppGroupExample"
-let SHARED_USER_DEFAULTS_KEY = "appGroupKey"
+let SHARED_USER_DEFAULTS_KEY = "appGroupKey"    // example; could use any key
 
 let DefaultsStore = UserDefaults(suiteName: SHARED_USER_DEFAULTS_GROUP)!

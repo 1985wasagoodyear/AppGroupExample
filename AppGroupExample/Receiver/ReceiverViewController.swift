@@ -14,11 +14,7 @@ class ReceiverViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // get the saved value from the common store
-        if let text = self.loadFromFileManager() {
-            self.textLabel.text = text
-        } else {
-            self.textLabel.text = ""
-        }
+        self.textLabel.text = self.loadFromFileManager() ?? ""
     }
     
     // MARK: Persistance Manager Handlers

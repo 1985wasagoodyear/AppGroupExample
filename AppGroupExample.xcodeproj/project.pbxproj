@@ -74,6 +74,7 @@
 		3F77E53C238DB9C600C2A1A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F77E548238DBA5300C2A1A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F77E54B238DBD6900C2A1A4 /* UIKit+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Utility.swift"; sourceTree = "<group>"; };
+		3F77E54E238DC46500C2A1A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 		3F0BE183217A574C00D79A8E = {
 			isa = PBXGroup;
 			children = (
+				3F77E54E238DC46500C2A1A4 /* README.md */,
 				3F6ED37C217A5EBB0001ECD8 /* AppGroupExampleReceiver.entitlements */,
 				3F6ED37B217A5EB70001ECD8 /* AppGroupExampleSender.entitlements */,
 				3F77E53A238DB9C600C2A1A4 /* AppGroupExampleCommon */,

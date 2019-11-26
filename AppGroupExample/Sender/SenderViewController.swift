@@ -7,24 +7,36 @@
 //
 
 import UIKit
+import AppGroupExampleCommon
 
-class SenderViewController: UIViewController {
+final class SenderViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
+    // MARK: - Storyboard Outlets
+    @IBOutlet var textField: UITextField! {
+        didSet {
+            textField.roundify()
+        }
+    }
+    
+    // MARK: - Properties
+    
+    let fileManager = SharedFileManager()
+    
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // when the app becomes inactive
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(didLeaveApp),
-                                               name: UIApplication.willResignActiveNotification,
-                                               object: nil)
+        // when the app becomes inactive,
+        // save any existing data
+        let notiCenter = NotificationCenter.default
+        notiCenter.addObserver(self,
+                               selector: #selector(didLeaveApp),
+                               name: UIApplication.willResignActiveNotification,
+                               object: nil)
     }
     
     @objc
     func didLeaveApp() {
-        // save the data
         if let text = textField.text {
             self.saveToFileManager(text)
         }
@@ -33,14 +45,13 @@ class SenderViewController: UIViewController {
     // MARK: Persistance Manager Handlers
     
     func saveToFileManager(_ text: String) {
-        SharedFileManager.save(string: text, fileName: SHARED_FILE_FILENAME)
+        fileManager.save(string: text, fileName: SHARED_FILE_FILENAME)
     }
     
     func saveToUserDefaults(_ text: String) {
-        DefaultsStore.set(text, forKey: SHARED_USER_DEFAULTS_KEY)
-        DefaultsStore.synchronize()
+        let store = AppGroupSharedConstants.DEFAULTS_STORE
+        store.set(text, forKey: AppGroupSharedConstants.KEY)
+        store.synchronize()
     }
     
-
 }
-

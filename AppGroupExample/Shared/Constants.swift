@@ -2,16 +2,12 @@
 //  Constants.swift
 //  AppGroupExampleSender
 //
-//  Created by Kevin Yu on 10/19/18.
-//  Copyright © 2018 Kevin Yu. All rights reserved.
+//  Created by K Y on 11/26/19.
+//  Copyright © 2019 Kevin Yu. All rights reserved.
 //
-
-// constants, defines the shared store for persistance
-// this file contains all setup for UserDefaults
 
 import Foundation
 
-let SHARED_USER_DEFAULTS_GROUP = "group.KevinYu.AppGroupExample"
-let SHARED_USER_DEFAULTS_KEY = "appGroupKey"    // example; could use any key
+// placeholder, could dynamically set up filenames for use
+let SHARED_FILE_FILENAME = "sharedFileFileName"
 
-let DefaultsStore = UserDefaults(suiteName: SHARED_USER_DEFAULTS_GROUP)!

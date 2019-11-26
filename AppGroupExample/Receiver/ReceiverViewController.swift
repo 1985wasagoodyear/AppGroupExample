@@ -7,23 +7,39 @@
 //
 
 import UIKit
+import AppGroupExampleCommon
 
 class ReceiverViewController: UIViewController {
 
-    @IBOutlet weak var textLabel: UILabel!
+    // MARK: - Storyboard Outlets
+    
+    @IBOutlet var textLabel: UILabel! {
+        didSet {
+            textLabel.roundify()
+        }
+    }
+    
+    // MARK: - Properties
+    
+    let fileManager = SharedFileManager()
+    
+    // MARK: - Lifecycle Methods
     
     override func viewWillAppear(_ animated: Bool) {
         // get the saved value from the common store
-        self.textLabel.text = self.loadFromFileManager() ?? ""
+        self.textLabel.text = self.loadFromFileManager() ?? "Data not found"
     }
     
     // MARK: Persistance Manager Handlers
     
     private func loadFromUserDefaults() -> String? {
-        return DefaultsStore.string(forKey: SHARED_USER_DEFAULTS_KEY)
+        let store = AppGroupSharedConstants.DEFAULTS_STORE
+        let key = AppGroupSharedConstants.KEY
+        return store.string(forKey: key)
     }
     
     private func loadFromFileManager() -> String? {
-        return SharedFileManager.loadFile(SHARED_FILE_FILENAME)
+        return fileManager.loadString(fileName: SHARED_FILE_FILENAME)
     }
+    
 }

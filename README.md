@@ -6,7 +6,8 @@
 
 * Allows multiple apps of a developer to share some local data.
 
-* iOS apps are all sandboxed-they have no access to one another's data under normal circumstances.
+* iOS apps are all sandboxed:
+    * they have no access to one another's data under normal circumstances.
 
 
 # Setting up your App Group:

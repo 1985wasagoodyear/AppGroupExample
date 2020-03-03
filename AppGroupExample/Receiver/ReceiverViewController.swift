@@ -25,9 +25,19 @@ class ReceiverViewController: UIViewController {
     
     // MARK: - Lifecycle Methods
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let notiCenter = NotificationCenter.default
+        notiCenter.addObserver(self,
+                               selector: #selector(updateLabel),
+                               name: UIApplication.didBecomeActiveNotification,
+                               object: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        // get the saved value from the common store
-        self.textLabel.text = self.loadFromFileManager() ?? "Data not found"
+        super.viewWillAppear(animated)
+        updateLabel()
     }
     
     // MARK: Persistance Manager Handlers
@@ -39,7 +49,13 @@ class ReceiverViewController: UIViewController {
     }
     
     private func loadFromFileManager() -> String? {
+        // TODO - debug this?
         return fileManager.loadString(fileName: SHARED_FILE_FILENAME)
+    }
+    
+    // get the saved value from the common store
+    @objc func updateLabel() {
+        textLabel.text = loadFromFileManager() ?? "Data not found"
     }
     
 }

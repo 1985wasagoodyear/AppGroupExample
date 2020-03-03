@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  SenderAppDelegate.swift
 //  AppGroupExample
 //
 //  Created by Kevin Yu on 10/19/18.
@@ -9,17 +9,18 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+final class SenderAppDelegate: UIResponder, UIApplicationDelegate {
+
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ReceiverViewController")
-        self.window?.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = .initiateFromMain(identifier: "SenderViewController")
+        window?.makeKeyAndVisible()
         
         return true
     }
-    
+
 }
+

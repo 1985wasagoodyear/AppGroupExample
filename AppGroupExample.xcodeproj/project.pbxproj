@@ -14,8 +14,8 @@
 		3F0BE1A8217A57C700D79A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0BE198217A574F00D79A8E /* LaunchScreen.storyboard */; };
 		3F0BE1A9217A57C700D79A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0BE196217A574F00D79A8E /* Assets.xcassets */; };
 		3F0BE1AA217A57C700D79A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0BE193217A574C00D79A8E /* Main.storyboard */; };
-		3F0BE1B3217A585500D79A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE1B2217A585500D79A8E /* AppDelegate.swift */; };
-		3F0BE1B8217A589100D79A8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE1B4217A587100D79A8E /* AppDelegate.swift */; };
+		3F0BE1B3217A585500D79A8E /* SenderAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE1B2217A585500D79A8E /* SenderAppDelegate.swift */; };
+		3F0BE1B8217A589100D79A8E /* ReceiverAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE1B4217A587100D79A8E /* ReceiverAppDelegate.swift */; };
 		3F0BE1B9217A589800D79A8E /* ReceiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE1B0217A57F400D79A8E /* ReceiverViewController.swift */; };
 		3F6ED37F217A61AC0001ECD8 /* ReceiverInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6ED37E217A61AC0001ECD8 /* ReceiverInfo.plist */; };
 		3F77E53D238DB9C600C2A1A4 /* AppGroupExampleCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F77E53B238DB9C600C2A1A4 /* AppGroupExampleCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,8 +62,8 @@
 		3F0BE19B217A574F00D79A8E /* SenderInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SenderInfo.plist; sourceTree = "<group>"; };
 		3F0BE1AE217A57C700D79A8E /* AppGroupExampleReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppGroupExampleReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0BE1B0217A57F400D79A8E /* ReceiverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverViewController.swift; sourceTree = "<group>"; };
-		3F0BE1B2217A585500D79A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F0BE1B4217A587100D79A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F0BE1B2217A585500D79A8E /* SenderAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAppDelegate.swift; sourceTree = "<group>"; };
+		3F0BE1B4217A587100D79A8E /* ReceiverAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverAppDelegate.swift; sourceTree = "<group>"; };
 		3F0BE1BA217A5A7600D79A8E /* AppGroupSharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupSharedConstants.swift; sourceTree = "<group>"; };
 		3F6ED37B217A5EB70001ECD8 /* AppGroupExampleSender.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppGroupExampleSender.entitlements; sourceTree = "<group>"; };
 		3F6ED37C217A5EBB0001ECD8 /* AppGroupExampleReceiver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppGroupExampleReceiver.entitlements; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0BE191217A574C00D79A8E /* SenderViewController.swift */,
-				3F0BE1B2217A585500D79A8E /* AppDelegate.swift */,
+				3F0BE1B2217A585500D79A8E /* SenderAppDelegate.swift */,
 				3F0BE19B217A574F00D79A8E /* SenderInfo.plist */,
 			);
 			path = Sender;
@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0BE1B0217A57F400D79A8E /* ReceiverViewController.swift */,
-				3F0BE1B4217A587100D79A8E /* AppDelegate.swift */,
+				3F0BE1B4217A587100D79A8E /* ReceiverAppDelegate.swift */,
 				3F6ED37E217A61AC0001ECD8 /* ReceiverInfo.plist */,
 			);
 			path = Receiver;
@@ -332,7 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F0BE1B3217A585500D79A8E /* AppDelegate.swift in Sources */,
+				3F0BE1B3217A585500D79A8E /* SenderAppDelegate.swift in Sources */,
 				3F0BE192217A574C00D79A8E /* SenderViewController.swift in Sources */,
 				3F77E549238DBA5300C2A1A4 /* Constants.swift in Sources */,
 				3F77E54C238DBD6900C2A1A4 /* UIKit+Utility.swift in Sources */,
@@ -343,7 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F0BE1B8217A589100D79A8E /* AppDelegate.swift in Sources */,
+				3F0BE1B8217A589100D79A8E /* ReceiverAppDelegate.swift in Sources */,
 				3F0BE1B9217A589800D79A8E /* ReceiverViewController.swift in Sources */,
 				3F77E54A238DBCA000C2A1A4 /* Constants.swift in Sources */,
 				3F77E54D238DBDDE00C2A1A4 /* UIKit+Utility.swift in Sources */,

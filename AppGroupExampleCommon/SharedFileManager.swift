@@ -24,9 +24,8 @@ public final class SharedFileManager {
     
     // MARK: - Data Access Methods
     
-    public func save(string: String, fileName: String? = nil) {
-        // create file URL to save to
-        let fileURL = groupURL.appendingPathComponent(fileName ?? string)
+    public func save(string: String, fileName: String) {
+        let fileURL = groupURL.appendingPathComponent(fileName)
         do {
             try string.write(to: fileURL, atomically: false, encoding: .utf8)
         }
@@ -36,15 +35,15 @@ public final class SharedFileManager {
     }
     
     public func loadString(fileName: String) -> String? {
-        // set up file URL to read from
         let fileURL = groupURL.appendingPathComponent(fileName)
+        var returnString: String? = nil
         do {
-            return try String(contentsOf: fileURL, encoding: .utf8)
+            returnString = try String(contentsOf: fileURL, encoding: .utf8)
         }
         catch {
             print("Could not load from this file!")
-            return nil
         }
+        return returnString
     }
     
 }
